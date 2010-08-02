@@ -1,6 +1,8 @@
 # Information #
 
-Pensé pour le CMS [peanut](http://github.com/pocky/peanut), ce plugin peut cependant fonctionner sur n'importe quel projet symfony avec peu de modifications.
+Pensé pour le CMS [peanut](http://github.com/pocky/peanut) et le behavior/helper [sfDoctrineActAsSeoable](http://github.com/pocky/sfDoctrineActAsSeoable) ce plugin  ne peut être installé sans modification dans le module seo que sur un projet créé sur la base de peanut.
+
+La modification n'est cependant pas très complexe pour toute personne connaissant un peu le frameworker symfony.
 
 # Installation #
 
