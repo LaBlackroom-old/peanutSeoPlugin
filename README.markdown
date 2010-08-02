@@ -67,5 +67,27 @@ __Attention dans le cas présent, l'objet en cours est `$peanut_page`__
     <?php seo('keywords', $peanut_page) ?>
     <?php seo('index', $peanut_page) ?>
 
-# Complément à venir ! #
+# Activer le sitemap #
+
+Ajouter le module dans le fichier `settings.yml` :
+
+    all:
+      .settings:
+        enabled_modules:        [seo]
+
+
+Dans le fichier `app.yml` :
+
+    all:
+      
+      seo:
+        homepage:
+          changefreq:             daily
+          priority:               1.0
+        page:
+          changefreq:             monthly
+          priority:               0.5
+
+Puis `$ php symfony cc` et aller dans http://votresite.tld/sitemap.xml
+
 
