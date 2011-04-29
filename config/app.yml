@@ -9,6 +9,7 @@ all:
     keywords:                 "peanut, symfony, cms"
     robots:                   "index, follow"
     language:                 "fr_FR"
+    
   seo:
     homepage:
       changefreq:             daily

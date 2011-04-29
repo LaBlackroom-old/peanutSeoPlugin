@@ -20,7 +20,7 @@
 
   function seoMeta($role, $object, $options = array())
   {
-    $object = $object->getpeanutSeoPluginSeo()->$role;
+    $object = $object->getPeanutSeo()->$role;
 
     if($object)
     {
@@ -35,8 +35,8 @@
 
   function seoIndex($object)
   {
-    $indexable = $object->getpeanutSeoPluginSeo()->getIsIndexable();
-    $followable = $object->getpeanutSeoPluginSeo()->getIsFollowable();
+    $indexable = $object->getPeanutSeo()->getIsIndexable();
+    $followable = $object->getPeanutSeo()->getIsFollowable();
 
     if($indexable && $followable)
     {
