@@ -28,7 +28,7 @@ abstract class PluginpeanutSeoForm extends BasepeanutSeoForm
     ));
 
     $this->widgetSchema['keywords'] = new sfWidgetFormHtml5InputText($options = array(), $attributes = array(
-        'placeholder' => 'My seo tags (comma separated'
+        'placeholder' => 'My seo tags (comma separated)'
     ));
 
     $this->widgetSchema['is_indexable'] = new sfWidgetFormChoice(array(
