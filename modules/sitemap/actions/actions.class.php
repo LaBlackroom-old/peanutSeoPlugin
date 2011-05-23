@@ -19,8 +19,6 @@
 
       $linkSitemap = Doctrine::getTable('peanutSeo')->getSitemap('peanutLink');
       $this->linkSitemap = $linkSitemap->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
-
-      $this->forward404Unless($this->linkSitemap);
     }
   }
   

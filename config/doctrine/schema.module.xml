@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<orm-designer version="1.4.3.457">
+
+  <module import-format="DoctrineYml" import-path="schema.yml" name="peanutSeoPlugin" visBkColor="16317694" visSizeX="14" visSizeX2="159" visSizeY="0" visSizeY2="161">
+    <table name="peanutSeo" visPositionX="20" visPositionY="40" visSizeX="0" visSizeX2="119" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="title" size="255" type="string"/>
+      <column name="description" size="255" type="string"/>
+      <column name="keywords" size="195" type="string"/>
+      <column default="true" name="is_indexable" required="true" type="integer"/>
+      <column default="true" name="is_followable" required="true" type="integer"/>
+    </table>
+  </module>
+
+</orm-designer>

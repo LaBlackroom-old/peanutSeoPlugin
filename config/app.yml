@@ -1,15 +1,8 @@
-# You can find more information about this file on the symfony website:
+ # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/11-App
 
 # default values
-all:
-  meta:
-    title:                    "peanut :: another CMS on symfony"
-    description:              "The demo site for peanut"
-    keywords:                 "peanut, symfony, cms"
-    robots:                   "index, follow"
-    language:                 "fr_FR"
-    
+all:    
   seo:
     homepage:
       changefreq:             daily
