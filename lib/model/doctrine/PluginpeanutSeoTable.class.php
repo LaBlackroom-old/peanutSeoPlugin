@@ -13,6 +13,7 @@ abstract class PluginpeanutSeoTable extends Doctrine_Table
   {
     $p = Doctrine_Query::create()
       ->from($model . ' p')
+      ->leftJoin('p.Translation t')
       ->where('p.status = ?', $status)
       ->orderBy('updated_at');
       

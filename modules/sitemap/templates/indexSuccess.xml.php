@@ -16,26 +16,34 @@
   	<changefreq><?php echo $seoHomepage['changefreq']; ?></changefreq>
   	<priority><?php echo $seoHomepage['priority']; ?></priority>
   </url>
-
+  
   <?php foreach($pageSitemap as $sitemap) { ?>
   
-  <url>
-  	<loc><?php echo url_for('item_show', array('slug' => $sitemap['slug'], 'sf_format' => 'html'), true) ?></loc>
-  	<lastmod><?php echo $sitemap['updated_at']; ?></lastmod>
-  	<changefreq><?php echo $seoPage['changefreq']; ?></changefreq>
-  	<priority><?php echo $seoPage['priority']; ?></priority>
-  </url>
+    <?php foreach($sitemap['Translation'] as $tsm) { ?>
+  
+    <url>
+      <loc><?php echo url_for('item_show', array('sf_culture' => $tsm['lang'], 'slug' => $tsm['slug'], 'sf_format' => 'html'), true) ?></loc>
+      <lastmod><?php echo $sitemap['updated_at']; ?></lastmod>
+      <changefreq><?php echo $seoPage['changefreq']; ?></changefreq>
+      <priority><?php echo $seoPage['priority']; ?></priority>
+    </url>
+  
+    <?php } ?>
   
   <?php } ?>
 
   <?php foreach($linkSitemap as $sitemap) { ?>
 
-  <url>
-  	<loc><?php echo url_for('item_show', array('slug' => $sitemap['slug'], 'sf_format' => 'html'), true) ?></loc>
-  	<lastmod><?php echo $sitemap['updated_at']; ?></lastmod>
-  	<changefreq><?php echo $seoLink['changefreq']; ?></changefreq>
-  	<priority><?php echo $seoLink['priority']; ?></priority>
-  </url>
+    <?php foreach($sitemap['Translation'] as $tsm) { ?>
+  
+    <url>
+      <loc><?php echo url_for('item_show', array('sf_culture' => $tsm['lang'], 'slug' => $tsm['slug'], 'sf_format' => 'html'), true) ?></loc>
+      <lastmod><?php echo $sitemap['updated_at']; ?></lastmod>
+      <changefreq><?php echo $seoPage['changefreq']; ?></changefreq>
+      <priority><?php echo $seoPage['priority']; ?></priority>
+    </url>
+  
+    <?php } ?>
 
   <?php } ?>
 

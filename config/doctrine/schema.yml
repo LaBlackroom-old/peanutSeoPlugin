@@ -1,5 +1,8 @@
 peanutSeo:
-  columns:
+  actAs:
+    I18n:
+      fields:      [title, description, keywords]
+  columns:  
     id:
       primary: true
       type: integer
