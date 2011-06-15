@@ -17,7 +17,7 @@ class Doctrine_Template_Seoable extends Doctrine_Template
     $this->hasOne('peanutSeo', array(
       'local'    => 'seo_id',
       'foreign'  => 'id',
-      'onDelete' => 'CASCADE'
+      'cascade'  => array('delete')
     ));
   }
   
