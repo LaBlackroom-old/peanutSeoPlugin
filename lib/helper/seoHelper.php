@@ -1,11 +1,11 @@
 <?php
 
-  function seo($role, $object, $options = array())
+  function seo($role, $object, $default = null)
   {
 
     if($role == 'title' || $role == 'description' || $role == 'keywords')
     {
-      seoMeta($role, $object, $options = array());
+      seoMeta($role, $object, $default);
     }
     elseif($role == 'index')
     {
@@ -18,19 +18,21 @@
 
   }
 
-  function seoMeta($role, $object, $options = array())
+  function seoMeta($role, $object, $default)
   {
     $object = $object->getPeanutSeo()->$role;
+    $slot = null;
 
     if($object)
     {
-      return slot($role, sprintf($object));
+      $slot = slot($role, sprintf($object));
     }
-    else
+    elseif($default !== null)
     {
-      return null;
+      $slot = slot($role, sprintf($default));
     }
 
+    return $slot;
   }
 
   function seoIndex($object)
