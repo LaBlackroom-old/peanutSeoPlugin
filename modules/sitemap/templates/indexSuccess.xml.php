@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <?xml version="1.0" encoding="UTF-8" ?>
 <?xml-stylesheet type="text/xsl" href="/peanutSeoPlugin/seo/sitemap.xsl" ?>
 
@@ -12,7 +13,7 @@
   
   <url>
   	<loc><?php echo url_for('@homepage', true) ?></loc>
-    <lastmod><?php echo $pageSitemap[0]['updated_at']; ?></lastmod>
+    <lastmod><?php echo format_date($pageSitemap[0]['updated_at'], 'yyyy-MM-dd'); ?></lastmod>
   	<changefreq><?php echo $seoHomepage['changefreq']; ?></changefreq>
   	<priority><?php echo $seoHomepage['priority']; ?></priority>
   </url>
@@ -21,7 +22,7 @@
   
   <url>
   	<loc><?php echo url_for('item_show', array('slug' => $sitemap['slug'], 'sf_format' => 'html'), true) ?></loc>
-  	<lastmod><?php echo $sitemap['updated_at']; ?></lastmod>
+  	<lastmod><?php echo format_date($sitemap['updated_at'], 'yyyy-MM-dd'); ?></lastmod>
   	<changefreq><?php echo $seoPage['changefreq']; ?></changefreq>
   	<priority><?php echo $seoPage['priority']; ?></priority>
   </url>
@@ -32,7 +33,7 @@
 
   <url>
   	<loc><?php echo url_for('item_show', array('slug' => $sitemap['slug'], 'sf_format' => 'html'), true) ?></loc>
-  	<lastmod><?php echo $sitemap['updated_at']; ?></lastmod>
+  	<lastmod><?php echo format_date($sitemap['updated_at'], 'yyyy-MM-dd'); ?></lastmod>
   	<changefreq><?php echo $seoLink['changefreq']; ?></changefreq>
   	<priority><?php echo $seoLink['priority']; ?></priority>
   </url>
